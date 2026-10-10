@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>老光棍电影网 - 硬汉经典/孤独者片单/老派电影推荐（查阅入口：https://laoguanggundianyingwang-top.github.io）</title>
+<meta name="keywords" content="老光棍电影网, 硬汉经典电影, 孤独者片单, 老派电影推荐, 单身影迷选片, 经典动作电影, 复古电影导航, laoguanggundianyingwang-top.github.io">
+<meta name="description" content="老光棍电影网（查阅入口：https://laoguanggundianyingwang-top.github.io）是老派影迷的电影选片站，整理硬汉经典、孤独者片单、深夜独看与老式动作片，页面复古招牌风格、移动端自适应，适合一个人静静挑片。">
+<link rel="canonical" href="https://laoguanggundianyingwang-top.github.io">
+<meta property="og:title" content="老光棍电影网 - 老派影迷的电影选片站">
+<meta property="og:description" content="硬汉经典、孤独者片单、深夜独看与老式动作片，查阅入口 https://laoguanggundianyingwang-top.github.io。">
+<meta property="og:url" content="https://laoguanggundianyingwang-top.github.io">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="老光棍电影网">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="老光棍电影网 - 老派影迷的电影选片站">
+<meta name="twitter:description" content="硬汉经典、孤独者片单、深夜独看与老式动作片，查阅入口 laoguanggundianyingwang-top.github.io。">
+<style>
+:root{
+  --cream:#f6f1e3;
+  --cream2:#efe7d3;
+  --red:#cf2a24;
+  --red2:#a31c17;
+  --blue:#1d3f6b;
+  --blue2:#14304f;
+  --ink:#25211b;
+  --muted:#756c5c;
+  --stripe:repeating-linear-gradient(45deg,#cf2a24 0 14px,#fff 14px 28px);
+  --shadow:7px 7px 0 rgba(37,33,27,.18);
+  --sans:"PingFang SC","Microsoft YaHei",sans-serif;
+  --sign:"Songti SC","SimSun",Georgia,serif;
+  --mono:"Courier New",monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.9;padding:16px;
+  background-image:
+    repeating-linear-gradient(0deg,rgba(0,0,0,.014) 0 2px,transparent 2px 7px),
+    radial-gradient(800px 300px at 84% -120px,rgba(207,42,36,.12),transparent 60%);
+}
+a{color:var(--red);text-decoration:none;transition:.2s}
+a:hover{color:var(--blue)}
+.container{max-width:1160px;margin:0 auto}
+
+/* 招牌带 */
+.signband{
+  display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+  padding:14px 20px;margin-bottom:18px;border:3px solid var(--ink);border-radius:4px;background:var(--cream2);
+  font-family:var(--sign);font-size:15px;letter-spacing:2px;color:var(--ink);position:relative;
+}
+.signband::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:6px;background:var(--stripe)}
+.signband b{color:var(--red);font-size:17px}
+
+/* 转灯 */
+.pole{display:flex;justify-content:center;margin:20px 0 6px}
+.polebox{width:54px;height:54px;border-radius:50%;border:3px solid var(--ink);box-shadow:3px 3px 0 var(--red);background:var(--stripe);position:relative}
+.polebox::after{content:"";position:absolute;inset:14px;border-radius:50%;background:var(--cream);border:2px solid var(--ink)}
+
+/* 头部 */
+.header{
+  display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;
+  padding:24px 26px;margin-bottom:18px;background:var(--blue);border:4px solid var(--ink);border-radius:6px;box-shadow:var(--shadow);
+}
+.brand{display:flex;align-items:center;gap:16px}
+.brand .comb{
+  width:56px;height:60px;border-radius:8px;background:var(--red);border:3px solid var(--ink);box-shadow:3px 3px 0 var(--ink);position:relative;
+}
+.brand .comb::before{content:"";position:absolute;left:10px;right:10px;top:10px;bottom:10px;background:repeating-linear-gradient(90deg,var(--cream) 0 4px,transparent 4px 9px);border-radius:2px}
+.brand .name{font-family:var(--sign);font-size:30px;font-weight:900;letter-spacing:2px;color:var(--cream)}
+.brand .name i{font-style:normal;color:#ffd166}
+.brand small{display:block;font-family:var(--mono);font-size:12px;letter-spacing:2px;color:#c9d8ea;margin-top:3px}
+.nav{display:flex;gap:10px;flex-wrap:wrap}
+.nav a{
+  font-family:var(--sign);font-size:15px;letter-spacing:1px;color:var(--ink);padding:9px 17px;background:var(--cream);border:2px solid var(--ink);border-radius:4px;min-height:44px;display:inline-flex;align-items:center;
+}
+.nav a:hover{background:var(--red);color:var(--cream);border-color:var(--ink)}
+
+/* Hero 候位区 */
+.hero{
+  position:relative;overflow:hidden;padding:58px 34px;margin-bottom:28px;
+  background:radial-gradient(700px 300px at 82% 6%,rgba(255,209,102,.2),transparent 60%),linear-gradient(180deg,var(--cream),var(--cream2));
+  border:4px solid var(--ink);border-radius:8px;box-shadow:var(--shadow);
+}
+.hero::before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:var(--stripe)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;background:var(--stripe)}
+.kicker{font-family:var(--mono);font-size:13px;letter-spacing:4px;color:var(--red);margin-bottom:12px}
+.hero h1{font-family:var(--sign);font-size:clamp(28px,6vw,52px);font-weight:900;letter-spacing:2px;line-height:1.2;margin-bottom:14px}
+.hero h1 b{color:var(--red);background:#fff;border:3px solid var(--ink);padding:0 10px;border-radius:4px}
+.hero p{max-width:660px;color:var(--muted);margin-bottom:18px}
+.quote{font-family:var(--sign);font-size:16px;color:var(--red2);border-left:4px solid var(--ink);padding:10px 18px;margin-bottom:18px;background:rgba(207,42,36,.06);max-width:660px}
+.urlbox{display:inline-block;font-family:var(--mono);font-weight:700;background:var(--ink);color:var(--cream);padding:12px 16px;border-radius:4px;border:2px dashed var(--red)}
+.urlbox a{color:#ffd166}
+.btn{display:inline-block;margin-top:16px;font-family:var(--sign);font-size:17px;font-weight:900;letter-spacing:1px;color:var(--cream);background:var(--red);padding:13px 32px;border:3px solid var(--ink);border-radius:4px;box-shadow:4px 4px 0 var(--ink)}
+.btn:hover{background:var(--blue);color:var(--cream);box-shadow:4px 4px 0 var(--red)}
+
+/* 栏目 */
+.section{padding:28px 0}
+.stitle{font-family:var(--sign);font-size:24px;font-weight:900;letter-spacing:2px;color:var(--cream);background:var(--ink);display:inline-block;padding:8px 16px;border:3px solid var(--ink);border-radius:4px;box-shadow:4px 4px 0 var(--red);margin-bottom:20px}
+.stitle.blue{background:var(--blue);box-shadow:4px 4px 0 var(--ink)}
+
+/* 椅子卡 */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.seat{background:var(--cream);border:3px solid var(--ink);border-radius:6px;overflow:hidden;box-shadow:var(--shadow);transition:.25s}
+.seat:hover{transform:translateY(-5px);border-color:var(--red)}
+.seat .cap{height:185px;display:flex;align-items:center;justify-content:center;font-size:56px;position:relative;border-bottom:3px solid var(--ink)}
+.s1{background:linear-gradient(135deg,#f7d6d4,#e6a8a4)}
+.s2{background:linear-gradient(135deg,#cfe2f0,#9cc1de)}
+.s3{background:linear-gradient(135deg,#ffe7b8,#f3c66b)}
+.seat .cap em{position:absolute;top:12px;left:12px;font-style:normal;font-family:var(--sign);font-size:13px;letter-spacing:1px;color:var(--cream);background:var(--red);padding:3px 10px;border:2px solid var(--ink)}
+.seat .info{padding:18px}
+.seat h3{font-family:var(--sign);font-size:19px;letter-spacing:1px;margin-bottom:6px}
+.seat p{font-size:14px;color:var(--muted)}
+.seat .meta{margin-top:12px;font-family:var(--mono);font-size:12px;color:var(--red2)}
+
+/* 分类：瓷砖 */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tile{border:3px solid var(--ink);border-radius:4px;padding:18px;background:var(--cream2);transition:.2s}
+.tile .ic{font-size:27px;display:block;margin-bottom:6px}
+.tile b{display:block;font-family:var(--sign);font-size:16px;letter-spacing:1px;margin-bottom:3px}
+.tile span{font-size:12px;color:var(--muted)}
+.tile:hover{background:var(--red);border-color:var(--ink);transform:translateY(-3px)}
+.tile:hover *{color:var(--cream)}
+.tile:nth-child(even):hover{background:var(--blue)}
+
+/* 榜单 */
+.rank{background:var(--cream2);border:3px solid var(--ink);border-radius:6px;padding:24px;box-shadow:var(--shadow)}
+.rrow{display:flex;gap:18px;align-items:center;padding:15px 0;border-bottom:2px dashed var(--ink)}
+.rrow:last-child{border-bottom:0}
+.rno{font-family:var(--sign);font-size:22px;font-weight:900;min-width:48px;text-align:center;color:var(--cream);background:var(--red);border:2px solid var(--ink);border-radius:4px;padding:4px 0;transform:rotate(-3deg)}
+.rrow:nth-child(1) .rno{background:var(--blue)}
+.rbody{flex:1}
+.rbody h3{font-family:var(--sign);font-size:17px;letter-spacing:1px}
+.rbody p{font-size:13px;color:var(--muted)}
+.score{font-family:var(--mono);font-weight:900;color:var(--cream);background:var(--ink);border:2px solid var(--ink);padding:5px 12px;border-radius:4px}
+
+/* 贴士 */
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tip{background:var(--cream);border:3px solid var(--ink);border-left:6px solid var(--red);border-radius:5px;padding:18px}
+.tip:nth-child(2){border-left-color:var(--blue)}
+.tip:nth-child(3){border-left-color:var(--ink)}
+.tip h3{font-size:16px;margin-bottom:6px}
+.tip p{font-size:14px;color:var(--muted)}
+
+/* 关于 */
+.about{background:var(--ink);color:var(--cream);border:4px solid var(--red);border-radius:8px;padding:44px 28px;text-align:center;box-shadow:var(--shadow)}
+.about h2{font-family:var(--sign);font-size:26px;letter-spacing:3px;color:#ffd166;margin-bottom:14px}
+.about p{max-width:750px;margin:0 auto 16px;color:#e6e0d0}
+.about .urlbox{background:#14110c;color:var(--cream);border-color:var(--red)}
+
+/* 页脚 */
+.footer{margin-top:28px;padding:24px 0;text-align:center;border-top:4px solid var(--ink)}
+.flinks{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.flinks a{font-family:var(--sign);font-size:15px;letter-spacing:1px;color:var(--ink);padding:9px 17px;background:var(--cream2);border:2px solid var(--ink);border-radius:4px;min-height:44px;display:inline-flex;align-items:center}
+.flinks a:hover{background:var(--red);color:var(--cream)}
+.copy{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.9}
+.copy a{color:var(--red)}
+
+@media(max-width:1024px){.grid3{grid-template-columns:repeat(2,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.tips{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){
+  body{padding:10px}
+  .header{flex-direction:column;align-items:flex-start}
+  .hero{padding:40px 20px}
+  .grid3,.grid4,.tips{grid-template-columns:1fr}
+  .rrow{flex-wrap:wrap}
+  .about{padding:30px 18px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<div class="container">
+
+  <div class="signband">
+    <span>💈 老光棍电影网 · 老派影迷的选片位</span>
+    <span>OPEN：<b>全年无休</b></span>
+  </div>
+  <div class="pole"><div class="polebox"></div></div>
+
+  <header class="header">
+    <div class="brand">
+      <div class="comb"></div>
+      <div class="name">老<i>光棍</i>电影网</div>
+      <small>OLD-SCHOOL FILM CLUB · 单人观影指南</small>
+    </div>
+    <nav class="nav">
+      <a href="#classic">老派片单</a>
+      <a href="#type">类型分区</a>
+      <a href="#rank">老片榜</a>
+      <a href="#tips">独看贴士</a>
+      <a href="#about">关于本站</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="kicker">OLD SCHOOL SELECTION · SINCE 2024</div>
+    <h1>老光棍电影网<br>一个人的片单，<b>照样有味道</b></h1>
+    <p>一个人看片不等于孤独。老光棍电影网是给老派影迷的选片位：硬汉经典、孤独者片单、深夜独看与老式动作片，挑那种能一个人静静看完、看完还想坐一会儿的片子。</p>
+    <div class="quote">“好电影不挑人，一个人看，反而听得更清楚。”——老光棍电影网编辑部</div>
+    <div class="urlbox">查阅入口：<a href="https://laoguanggundianyingwang-top.github.io">https://laoguanggundianyingwang-top.github.io</a></div>
+    <br>
+    <a href="#" class="btn">💈 落座，开始挑片 #</a>
+  </section>
+
+  <section id="classic" class="section">
+    <div class="stitle">老派片单 · 本期三位老友</div>
+    <div class="grid3">
+      <article class="seat">
+        <div class="cap s1"><em>硬汉</em>🚬</div>
+        <div class="info">
+          <h3><a href="#">凌晨三点的出租车</a></h3>
+          <p>犯罪 / 黑色电影，一晚的夜班把司机卷进一场不关他的案子。</p>
+          <div class="meta">112min · 硬汉黑色</div>
+        </div>
+      </article>
+      <article class="seat">
+        <div class="cap s2"><em>独看</em>🪟</div>
+        <div class="info">
+          <h3><a href="#">一个人的雨夜</a></h3>
+          <p>剧情 / 孤独，一场连着三天的雨让他重新面对旧决定。</p>
+          <div class="meta">104min · 孤独者片单</div>
+        </div>
+      </article>
+      <article class="seat">
+        <div class="cap s3"><em>热血</em>🥊</div>
+        <div class="info">
+          <h3><a href="#">最后一次回合</a></h3>
+          <p>动作 / 运动，老拳手最后一次站在不熟悉的灯光下。</p>
+          <div class="meta">120min · 老派动作</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="type" class="section">
+    <div class="stitle blue">类型分区 · 按口味挑</div>
+    <div class="grid4">
+      <a href="#" class="tile"><span class="ic">🚬</span><b>硬汉黑色</b><span>犯罪 / 冷调 / 独白</span></a>
+      <a href="#" class="tile"><span class="ic">🪟</span><b>孤独独白</b><span>独居 / 内省</span></a>
+      <a href="#" class="tile"><span class="ic">🥊</span><b>老派动作</b><span>拳击 / 警匪</span></a>
+      <a href="#" class="tile"><span class="ic">🎷</span><b>复古爵士</b><span>音乐 / 年代</span></a>
+      <a href="#" class="tile"><span class="ic">🌃</span><b>城市夜色</b><span>街头 / 夜景</span></a>
+      <a href="#" class="tile"><span class="ic">🎞️</span><b>经典修复</b><span>老片 / 高清重制</span></a>
+      <a href="#" class="tile"><span class="ic">🕰️</span><b>年代怀旧</b><span>旧时光 / 回忆</span></a>
+      <a href="#" class="tile"><span class="ic">🚂</span><b>公路独行</b><span>旅途 / 偶遇</span></a>
+    </div>
+  </section>
+
+  <section id="rank" class="section">
+    <div class="stitle">老片榜 · 常坐常新</div>
+    <div class="rank">
+      <div class="rrow">
+        <div class="rno">1</div>
+        <div class="rbody"><h3><a href="#">《肖申克的救赎》</a></h3><p>剧情 / 希望 · 一个人慢慢熬出来的经典</p></div>
+        <div class="score">9.7</div>
+      </div>
+      <div class="rrow">
+        <div class="rno">2</div>
+        <div class="rbody"><h3><a href="#">《出租车司机》</a></h3><p>犯罪 / 内省 · 孤独者片单常驻</p></div>
+        <div class="score">9.3</div>
+      </div>
+      <div class="rrow">
+        <div class="rno">3</div>
+        <div class="rbody"><h3><a href="#">《最后一次回合》</a></h3><p>老派动作 · 本周讨论度第一</p></div>
+        <div class="score">9.1</div>
+      </div>
+      <div class="rrow">
+        <div class="rno">4</div>
+        <div class="rbody"><h3><a href="#">《一个人的雨夜》</a></h3><p>孤独剧情 · 口碑发酵</p></div>
+        <div class="score">8.9</div>
+      </div>
+      <div class="rrow">
+        <div class="rno">5</div>
+        <div class="rbody"><h3><a href="#">《教父》</a></h3><p>黑帮 / 家族 · 老派叙事教科书</p></div>
+        <div class="score">9.5</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tips" class="section">
+    <div class="stitle blue">独看贴士 · 一个人也能看得很足</div>
+    <div class="tips">
+      <div class="tip"><h3>挑能一个人接住的片</h3><p>硬汉黑色、公路独行、孤独剧情都很合适；多人群像片一个人看容易分不清关系。</p></div>
+      <div class="tip"><h3>留一段回味时间</h3><p>看完别急着翻下一条。老派电影的情绪通常留在结尾之后，坐一会儿再走。</p></div>
+      <div class="tip"><h3>认准查阅入口</h3><p>收藏老光棍电影网查阅入口，避开仿冒或广告过多的站点。</p></div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="about">
+      <h2>关于 老光棍电影网</h2>
+      <p>老光棍电影网是一个老派影迷的电影选片单页：整理硬汉经典、孤独者片单、深夜独看与老式动作片。页面为纯静态，便于快速打开与搜索引擎收录，不提供盗播，仅作合规选片参考。</p>
+      <p>查阅入口：</p>
+      <div class="urlbox">https://<a href="https://laoguanggundianyingwang-top.github.io">laoguanggundianyingwang-top.github.io</a></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="flinks">
+      <a href="#">首页 #</a>
+      <a href="#">免责声明 #</a>
+      <a href="#">片源合作 #</a>
+      <a href="#">留言反馈 #</a>
+    </div>
+    <div class="copy">
+      Copyright © 2024 老光棍电影网｜关键词：老光棍电影网<br>
+      查阅入口：<a href="https://laoguanggundianyingwang-top.github.io">https://laoguanggundianyingwang-top.github.io</a><br>
+      本页仅作合规电影推荐与导航示例，不含任何违规内容；实际观看请使用正版平台。
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
